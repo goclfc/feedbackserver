@@ -28,18 +28,18 @@ const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log("server is running on port", port);
 });
-app.post('/fdbck', (req, res) => {
-    const bdd = req.body;
-    const fdb = new Fdbk;
-    fdb.anonim=bdd.anonim;
-    fdb.age=bdd.age;
-    fdb.brand=bdd.brand;
-    fdb.drugstore=bdd.drugstore;
-    fdb.contact=bdd.contact;
-    fdb.message=bdd.message;
-    fdb.save();
-    res.send('Ok');
-});
+// app.post('/fdbck', (req, res) => {
+//     const bdd = req.body;
+//     const fdb = new Fdbk;
+//     fdb.anonim=bdd.anonim;
+//     fdb.age=bdd.age;
+//     fdb.brand=bdd.brand;
+//     fdb.drugstore=bdd.drugstore;
+//     fdb.contact=bdd.contact;
+//     fdb.message=bdd.message;
+//     fdb.save();
+//     res.send('Ok');
+// });
 app.get("/", (req, res) => {
   res.send("Hello World, from express");
 });
