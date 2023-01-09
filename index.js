@@ -6,7 +6,9 @@ const bodyParser = require('body-parser');
 require('dotenv').config()
 const {Fdbk} = require('./model')
 const app =  express()
-app.use(cors())
+app.use(cors({
+    origin:"*"
+}))
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
