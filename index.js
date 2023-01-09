@@ -1,5 +1,4 @@
 const express = require('express')
-const db =require('./config/db')
 const cors = require("cors")
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
@@ -14,7 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // mongodb+srv://avrsifdbk:<password>@cluster0.aozwcec.mongodb.net/?retryWrites=true&w=majority
-const mongoUri = `mongodb+srv://${process.env.DB_ADMIN}:${process.env.DB_PASS}@${process.env.DB_HOST}?retryWrites=true&w=majority`
+DB_PASS=y1qyhEah5wfmrPLq
+DB_ADMIN=avrsifdbk
+DB_HOST=cluster0.aozwcec.mongodb.net/fdbdb
+const mongoUri = `mongodb+srv://${DB_ADMIN}:${DB_PASS}@${DB_HOST}?retryWrites=true&w=majority`
 
 mongoose.connect(mongoUri,{
     useNewUrlParser:true,
