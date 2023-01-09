@@ -7,8 +7,8 @@ require('dotenv').config()
 const {Fdbk} = require('./model')
 const app =  express()
 app.use(cors({
-    origin:"*"
-}))
+    origin: '*'
+}));
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
