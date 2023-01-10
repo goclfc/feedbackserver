@@ -3,16 +3,15 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 const schema = mongoose.Schema({
-    anonim:{
-        type:String,
-        trim:true
-    },
-    age:{},
-    brand:{},
-    drugstore:{},
+    anonim:{},
+    brandName:{},
+    contactInfo:{},
+    drugStoreInfo:{},
+    formAbout:{},
+    howToContact:{},
     message:{},
-    contact:{},
-    extra:{}
+    userAge:{},
+    visitTime:{}
 })
 const Fdbk = mongoose.model("Fdbk",schema);
 module.exports=({Fdbk})

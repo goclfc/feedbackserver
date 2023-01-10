@@ -31,12 +31,15 @@ app.listen(port, () => {
 app.post('/fdbck', (req, res) => {
     const bdd = req.body;
     const fdb = new Fdbk;
-    fdb.anonim=bdd.anonim;
-    fdb.age=bdd.age;
-    fdb.brand=bdd.brand;
-    fdb.drugstore=bdd.drugstore;
-    fdb.contact=bdd.contact;
-    fdb.message=bdd.message;
+    anonim=bdd.anonim,
+    brandName=bdd.brandName,
+    contactInfo=bdd.contactInfo,
+    drugStoreInfo=bdd.drugStoreInfo,
+    formAbout=bdd.formAbout,
+    howToContact=bdd.howToContact,
+    message=bdd.message,
+    userAge=bdd.userAge,
+    visitTime=bdd.visitTime
     fdb.save();
     res.send('Ok');
 });
@@ -44,16 +47,15 @@ app.get("/", (req, res) => {
   res.send("Hello World, from express");
 });
 const frrr = mongoose.Schema({
-  anonim: {
-    type: String,
-    trim: true,
-  },
-  age: {},
-  brand: {},
-  drugstore: {},
-  message: {},
-  contact: {},
-  extra: {},
+  anonim:{},
+  brandName:{},
+  contactInfo:{},
+  drugStoreInfo:{},
+  formAbout:{},
+  howToContact:{},
+  message:{},
+  userAge:{},
+  visitTime:{}
 });
 app.get("/all", (req, res) => {
   const getAll = async () => {
