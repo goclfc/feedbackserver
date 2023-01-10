@@ -31,15 +31,15 @@ app.listen(port, () => {
 app.post('/fdbck', (req, res) => {
     const bdd = req.body;
     const fdb = new Fdbk;
-    anonim=bdd.anonim,
-    brandName=bdd.brandName,
-    contactInfo=bdd.contactInfo,
-    drugStoreInfo=bdd.drugStoreInfo,
-    formAbout=bdd.formAbout,
-    howToContact=bdd.howToContact,
-    message=bdd.message,
-    userAge=bdd.userAge,
-    visitTime=bdd.visitTime
+    fdb.anonim=bdd.anonim,
+    fdb.brandName=bdd.brandName,
+    fdb.contactInfo=bdd.contactInfo,
+    fdb.drugStoreInfo=bdd.drugStoreInfo,
+    fdb.formAbout=bdd.formAbout,
+    fdb.howToContact=bdd.howToContact,
+    fdb.message=bdd.message,
+    fdb.userAge=bdd.userAge,
+    fdb.visitTime=bdd.visitTime
     fdb.save();
     res.send('Ok');
 });
